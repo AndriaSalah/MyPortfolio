@@ -6,6 +6,8 @@ import {useRef} from "react";
 import {useScroll} from "framer-motion";
 import Section3 from "./Components/Section3/Section3";
 import Section4 from "./Components/Section4/Section4";
+import SmoothScroll from "./Components/SmoothScroll";
+
 
 function App() {
     const MainContainerRef = useRef(null)

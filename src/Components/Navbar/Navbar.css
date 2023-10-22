@@ -1,0 +1,30 @@
+.NavBarContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+}
+.NavBar{
+    display: flex;
+    text-decoration: none;
+    width: 50%;
+    justify-content: space-evenly;
+}
+.NavBar .link{
+    color: var(--TextColor);
+    background-color: transparent;
+    outline: none;
+    border: 0 ;
+    border-bottom: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 19px;
+    transition-duration: 0.25s;
+    padding: 0.5rem 1rem ;
+    cursor: pointer;
+}
+
+.NavBar .link:hover{
+    background-color: white;
+    color: black;
+}

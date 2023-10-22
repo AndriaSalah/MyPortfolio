@@ -1,0 +1,17 @@
+.Section3{
+    display: flex;
+    height: 12.5%;
+    width: 100%;
+
+}
+
+.Section3 .TextContainer{
+    text-align: center;
+    width: 100%;
+    font-size: 48px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,26 @@
+.Projects-container{
+    margin-top: 20rem ;
+    font-size: 48px;
+
+    text-align: center;
+    color: white;
+    height: 300vh;
+    overflow-x: clip;
+}
+.Projects-container .ghost{
+    position: sticky;
+    top: 0;
+}
+.Projects-container .ghost h1{
+    padding: 6rem 0;
+    font-weight: lighter;
+}
+
+.Projects-wrapper{
+    width: fit-content;
+    height: 60vh;
+    display: flex;
+    overflow-x: hidden ;
+
+    top: 25%;
+}

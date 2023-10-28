@@ -1,0 +1,77 @@
+
+.Section1{
+    display: flex;
+    /*height: 12.5%;*/
+    height: 58.5rem;
+    width: 100%;
+
+
+}
+.Section1 .ImageContainer{
+    width: 50%;
+    display: grid;
+    place-content: center end;
+
+}
+
+.Section1 .ImageContainer img{
+    aspect-ratio: 1/1;
+    width:20rem;
+    object-fit: cover;
+    border-radius:50% ;
+    margin-right: 5rem ;
+
+}
+
+.Section1 .TextContainer{
+    width: 50%;
+    font-size: 48px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Section2{
+    display: flex;
+    /*height: 12.5%;*/
+    height: 58.5rem;
+    width: 100%;
+    justify-content: center;
+
+}
+
+
+.Section2 .TextContainer{
+    text-align: center;
+    width: 50%;
+    font-size: 48px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.Section3{
+    display: flex;
+    /*height: 12.5%;*/
+    height: 58.5rem;
+    width: 100%;
+
+}
+
+.Section3 .TextContainer{
+    text-align: center;
+    width: 100%;
+    font-size: 48px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10rem;
+
+}
+
+
+

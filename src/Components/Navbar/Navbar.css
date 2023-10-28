@@ -3,13 +3,21 @@
     display: flex;
     justify-content: center;
     z-index: 10;
-    position: relative;
+    position: sticky;
+    top: 1rem;
 }
 .NavBar{
     display: flex;
     text-decoration: none;
     width: 50%;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    background: rgba(2, 2, 2, 0.76);
+    border-radius: 40px;
+    padding: 0.5rem;
+    /*border: 1px rgba(255, 255, 255, 0.15) solid;*/
+}
+.NavBar li{
+    list-style: none;
 }
 .NavBar .link{
     color: var(--TextColor);

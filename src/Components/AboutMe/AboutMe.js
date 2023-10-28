@@ -1,11 +1,11 @@
 import React, {useRef} from 'react';
-import './Section4.css'
+import './AboutMe.css'
 import {useScroll, useTransform} from "framer-motion";
 import myPhoto from '../../Assets/Andar_Poly.webp';
 import AnimatedText from "../AnimatedText";
 import {motion} from "framer-motion";
 
-const Section4 = () => {
+const AboutMe = () => {
 
     const TargetRef = useRef(null)
     const {scrollYProgress} = useScroll({
@@ -69,4 +69,4 @@ const Section4 = () => {
         ;
 };
 
-export default Section4;
+export default AboutMe;

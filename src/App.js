@@ -1,29 +1,25 @@
 import './App.css';
 import Navbar from "./Components/Navbar/Navbar";
-import Section1 from "./Components/Section1/Section1";
-import Section2 from "./Components/Section2/Section2";
+import Welcome from "./Components/Welcome/Welcome";
 import {useRef} from "react";
-import {useScroll} from "framer-motion";
-import Section3 from "./Components/Section3/Section3";
-import Section4 from "./Components/Section4/Section4";
-import SmoothScroll from "./Components/SmoothScroll";
+import Projects from "./Components/Projects/Projects";
+import Skills from "./Components/Skills/Skills";
+import Contact from "./Components/Contact/Contact";
+
 
 
 function App() {
-    const MainContainerRef = useRef(null)
-    const {scrollYProgress} = useScroll({
-        target: MainContainerRef,
-        offset: ["start", "end start"]
-    })
-  return (
-    <div className="App" ref={MainContainerRef}>
-        <Navbar/>
-        <Section1 Y_progress={scrollYProgress}/>
-        <Section2 Y_progress={scrollYProgress}/>
-        <Section3 Y_progress={scrollYProgress}/>
-        <Section4/>
-    </div>
-  );
+    const ProjectsRef = useRef(null)
+    const ContactRef = useRef(null)
+    return (
+        <div className="App" >
+            <Navbar  projRef={ProjectsRef} contRef={ContactRef}/>
+            <Welcome/>
+            <Projects ref={ProjectsRef}/>
+            <Skills/>
+            <Contact ref={ContactRef}/>
+        </div>
+    );
 }
 
 export default App;

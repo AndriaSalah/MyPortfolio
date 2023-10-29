@@ -1,6 +1,6 @@
 .IntroContainer{
     width: 100%;
-    height: 78.4rem;
+    height: 58.4rem;
     font-size: 42px;
     color:white;
     text-align: center;
@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 .Intro .TextContainer{
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 .IntroContainer img{
     margin-top: 3rem;

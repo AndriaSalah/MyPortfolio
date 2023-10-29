@@ -6,16 +6,16 @@ import {motion} from "framer-motion";
 const Project = ({wallpaper,icon}) => {
     const wallpaperAnimation = {
         initial:{
-            width: "40rem"
+            width: "32vw"
         },
         hover:{
-            width:"50rem",
+            width:"36vw",
             filter:"brightness(1)"
         }
     }
     const iconAnimation = {
         hover:{
-            y:"220%"
+            y:"6vh"
         }
     }
     return (

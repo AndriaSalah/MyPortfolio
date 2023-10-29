@@ -40,17 +40,17 @@ const Welcome = () => {
             }
         }
     }
-    const moveImgY = useTransform(scrollYProgress,[0,0.38,0.75],[0,1200,1900])
-    const moveImgX = useTransform(scrollYProgress,[0,0.3],[0,250])
+    const moveImgY = useTransform(scrollYProgress,[0,0.38,0.75],["0","129vh","200vh"])
+    const moveImgX = useTransform(scrollYProgress,[0,0.3],["0","85%"])
     const opacityTxt_sec1 = useTransform(scrollYProgress,[0,0.18],[1,0])
     const opacityImg_sec1 = useTransform(scrollYProgress,[0.7,0.87],[1,0])
 
-    const opacityTxt_sec2 = useTransform(scrollYProgress, [0.33,0.4,0.55], [0,1,0])
+    const opacityTxt_sec2 = useTransform(scrollYProgress, [0.34,0.4,0.55], [0,1,0])
     const opacityTxt_sec3 = useTransform(scrollYProgress, [0.53,0.58,0.65,0.87], [0,1,1,0])
 
-    function printscroll(){
-        console.log(scrollYProgress.current)
-    }
+    // function printscroll(){
+    //     console.log(scrollYProgress.current)
+    // }
     return (
         <div ref={MainContainerRef} className={"Welcome"}>
             {/*<button onClick={printscroll} style={{position:"sticky" , top:"50%"}}>print scroll pos</button>*/}

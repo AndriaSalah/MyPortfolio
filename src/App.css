@@ -13,7 +13,7 @@
 
 .App{
   background: rgb(0,0,0);
-  background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgb(24, 18, 49) 50%, rgba(8,4,38,1) 100%);
+  background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgb(40, 26, 65) 50%, rgba(8,4,38,1) 100%);
   top: 0;
   left: 0;
   width: 100%;
@@ -45,7 +45,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(160deg, rgb(59, 59, 59) 0%, rgb(50, 36, 105) 50%);;
+  background: linear-gradient(160deg, rgb(87, 87, 87) 0%, rgb(61, 44, 128) 50%);;
   border-radius: 10px;
 
 }

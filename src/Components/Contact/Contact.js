@@ -89,7 +89,7 @@ const Contact = forwardRef ((props, MainContainer) => {
     }
     const testAnimation={
         initial:{
-            x:"50%",
+            x:"45%",
         },
         animate:{
            x:0,
@@ -104,7 +104,6 @@ const Contact = forwardRef ((props, MainContainer) => {
     const inView = useInView(MainContainer, {amount: 0.7, once: true})
     return (
         <div ref={MainContainer} className={"Contact"}>
-            {/*<h1><AnimatedText text={"Contact"}/></h1>*/}
             <div className={"ContactWrapper"}>
                 <motion.div className={"text"} initial={testAnimation.initial} animate={inView? testAnimation.animate: testAnimation.initial} >
                     <div>

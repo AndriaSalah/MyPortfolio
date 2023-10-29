@@ -25,7 +25,6 @@ const Intro = () => {
         },
         animate: {
             x: "-70rem",
-            // y:[100,0,100,0,100,0,100,0,100,0,100,0,100],
             rotate: -360,
             transition: {
                 ease: "circInOut",
@@ -39,9 +38,7 @@ const Intro = () => {
         }
     }
 
-    function printscroll() {
-        console.log(scrollYProgress.current)
-    }
+
 
     return (
         <div ref={MainContainerRef} className={"IntroContainer"}>

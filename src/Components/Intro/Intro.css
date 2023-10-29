@@ -1,0 +1,25 @@
+.IntroContainer{
+    width: 100%;
+    height: 78.4rem;
+    font-size: 42px;
+    color:white;
+    text-align: center;
+    overflow-x: clip;
+
+}
+.Intro{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Intro .TextContainer{
+    padding: 0 2rem;
+}
+.IntroContainer img{
+    margin-top: 3rem;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+}

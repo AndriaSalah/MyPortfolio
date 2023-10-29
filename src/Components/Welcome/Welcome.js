@@ -41,11 +41,11 @@ const Welcome = () => {
         }
     }
     const moveImgY = useTransform(scrollYProgress,[0,0.38,0.75],[0,1200,1900])
-    const moveImgX = useTransform(scrollYProgress,[0,0.4],[0,250])
+    const moveImgX = useTransform(scrollYProgress,[0,0.3],[0,250])
     const opacityTxt_sec1 = useTransform(scrollYProgress,[0,0.18],[1,0])
     const opacityImg_sec1 = useTransform(scrollYProgress,[0.7,0.87],[1,0])
 
-    const opacityTxt_sec2 = useTransform(scrollYProgress, [0.33,0.38,0.5], [0,1,0])
+    const opacityTxt_sec2 = useTransform(scrollYProgress, [0.33,0.4,0.55], [0,1,0])
     const opacityTxt_sec3 = useTransform(scrollYProgress, [0.53,0.58,0.65,0.87], [0,1,1,0])
 
     function printscroll(){

@@ -5,6 +5,7 @@ import {useRef} from "react";
 import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import Contact from "./Components/Contact/Contact";
+import Intro from "./Components/Intro/Intro";
 
 
 
@@ -15,6 +16,7 @@ function App() {
         <div className="App" >
             <Navbar  projRef={ProjectsRef} contRef={ContactRef}/>
             <Welcome/>
+            <Intro/>
             <Projects ref={ProjectsRef}/>
             <Skills/>
             <Contact ref={ContactRef}/>

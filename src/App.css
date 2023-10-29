@@ -10,20 +10,42 @@
   font-family: 'Roboto', sans-serif;
 
 }
+
 .App{
   background: rgb(0,0,0);
-  /*background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgba(31,26,58,1) 50%);*/
-  /*background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgba(31,26,58,1) 50%, rgba(11,6,53,1) 100%);*/
-  background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgba(31,26,58,1) 50%, rgba(8,4,38,1) 100%);
+  background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgb(24, 18, 49) 50%, rgba(8,4,38,1) 100%);
   top: 0;
   left: 0;
   width: 100%;
-  /*height: 800vh;*/
-  /*height: 468rem;*/
   height: fit-content;
-  padding: 0 2rem;
+
 
 }
 html {
   scroll-behavior: smooth;
+
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #642a83 rgba(255, 255, 255, 0);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+
+}
+
+*::-webkit-scrollbar-track {
+  background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgb(24, 18, 49) 60%, rgba(8,4,38,1) 100%);
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(160deg, rgb(59, 59, 59) 0%, rgb(50, 36, 105) 50%);;
+  border-radius: 10px;
+
 }

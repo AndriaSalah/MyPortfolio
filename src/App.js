@@ -12,11 +12,12 @@ import Intro from "./Components/Intro/Intro";
 function App() {
     const ProjectsRef = useRef(null)
     const ContactRef = useRef(null)
+    const aboutRef = useRef(null)
     return (
         <div className="App" >
-            <Navbar  projRef={ProjectsRef} contRef={ContactRef}/>
+            <Navbar aboutRef={aboutRef}  projRef={ProjectsRef} contRef={ContactRef}/>
             <Welcome/>
-            <Intro/>
+            <Intro ref={aboutRef}/>
             <Projects ref={ProjectsRef}/>
             <Skills/>
             <Contact ref={ContactRef}/>

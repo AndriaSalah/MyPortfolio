@@ -1,12 +1,12 @@
-import React, {useRef} from 'react';
+import React, {forwardRef, useRef} from 'react';
 import {motion, useInView, useScroll, useTransform} from 'framer-motion';
 import './Intro.css';
 import AnimatedText from "../AnimatedText";
 import myPhoto from "../../Assets/Andar_Poly.webp";
 
-const Intro = () => {
+const Intro = forwardRef ((props, MainContainerRef) => {
 
-    const MainContainerRef = useRef(null)
+
     const {scrollYProgress} = useScroll({
         target: MainContainerRef,
         offset: ["start", "end start"]
@@ -56,6 +56,6 @@ const Intro = () => {
             </motion.div>
         </div>
     );
-};
+});
 
 export default Intro;

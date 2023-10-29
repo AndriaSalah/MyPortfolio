@@ -1,15 +1,16 @@
 import React from 'react';
 import './Navbar.css'
-const Navbar = (refProp) => {
-    const scrollToProjects =()=> refProp.projRef.current.scrollIntoView()
-    const scrollToContact =()=> refProp.contRef.current.scrollIntoView()
+const Navbar = (refProps) => {
+    const scrollToProjects =()=> refProps.projRef.current.scrollIntoView()
+    const scrollToContact =()=> refProps.contRef.current.scrollIntoView()
+    const scrollToAbout =()=> refProps.aboutRef.current.scrollIntoView()
 
-    console.log(refProp.projRef)
+    console.log(refProps.projRef)
     return (
         <nav className={"NavBarContainer"}>
             <ul className={"NavBar"}>
                 <li>
-                    <button className={"link"}>About me</button>
+                    <button onClick={scrollToAbout} className={"link"}>About me</button>
                 </li>
                 <li>
                     <button onClick={scrollToProjects} className={"link"}>Projects</button>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import Skill from "./Skill/Skill";
 import './Skills.css'
 
@@ -59,9 +59,9 @@ const SkillsData=[
 ]
 
 
-const Skills = () => {
+const Skills = forwardRef ((props, ref) => {
     return (
-        <div className={"Skills"}>
+        <div ref={ref} className={"Skills"}>
             <h1><AnimatedText text={"SKILLS"} /></h1>
             <div className={"SkillsContainer"}>
                 {SkillsData.map((skill)=>(
@@ -70,6 +70,6 @@ const Skills = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Skills;

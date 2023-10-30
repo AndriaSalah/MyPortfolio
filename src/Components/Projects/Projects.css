@@ -1,6 +1,6 @@
 .Projects-container{
     margin-top: 3rem ;
-    font-size: 48px;
+    font-size: 5vh;
     text-align: center;
     color: white;
     height: 300vh;
@@ -11,7 +11,7 @@
     top: 5%;
 }
 .Projects-container .ghost h1{
-    padding: 6rem 0;
+    padding: 10vh 0;
     font-weight: lighter;
 }
 

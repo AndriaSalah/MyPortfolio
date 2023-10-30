@@ -23,8 +23,8 @@
 }
 
 .App .GoTop {
-    position: sticky;
-    top: 90%;
+    position: fixed;
+    bottom: 5%;
     left: 50%;
     z-index: 10;
     border-radius: 50%;

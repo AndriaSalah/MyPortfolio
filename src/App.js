@@ -25,13 +25,13 @@ function App() {
     // const ButtonEnabled=useTransform(scrollYProgress,[0.2,0.3],["none","block"])
     return (
         <div ref={MainContainerRef} className="App" >
-            <motion.button  className={"GoTop"} onClick={MoveToTop} style={{opacity:ButtonOpacity}}><IoIosArrowUp/></motion.button>
             <Navbar skillsRef={SkillRef} aboutRef={aboutRef}  projRef={ProjectsRef} contRef={ContactRef}/>
             <Welcome ref={welcomeRef}/>
             <Intro ref={aboutRef}/>
             <Projects ref={ProjectsRef}/>
             <Skills ref={SkillRef}/>
             <Contact ref={ContactRef}/>
+            <motion.button  className={"GoTop"} onClick={MoveToTop} style={{opacity:ButtonOpacity}}><IoIosArrowUp/></motion.button>
         </div>
     );
 }

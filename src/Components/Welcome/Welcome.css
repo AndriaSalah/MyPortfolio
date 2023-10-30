@@ -26,7 +26,7 @@
 
 .Section1 .TextContainer{
     width: 50%;
-    font-size: 48px;
+    font-size: 5vh;
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -46,7 +46,7 @@
 .Section2 .TextContainer{
     text-align: center;
     width: 50%;
-    font-size: 48px;
+    font-size: 4vh;
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -65,7 +65,7 @@
 .Section3 .TextContainer{
     text-align: center;
     width: 100%;
-    font-size: 48px;
+    font-size: 5vh;
     color: white;
     display: flex;
     justify-content: center;

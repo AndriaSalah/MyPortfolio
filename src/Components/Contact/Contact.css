@@ -1,6 +1,6 @@
 .Contact {
     color: white;
-    font-size: 48px;
+    font-size: 5vh;
     width: 100%;
     text-align: center;
     height: 100vh;
@@ -29,7 +29,7 @@
 }
 
 .ContactWrapper .text .extra {
-    font-size: 34px;
+    font-size: 3.5vh;
     margin: 0.5rem 0 0 6rem;
 }
 
@@ -38,8 +38,8 @@
     color: rgba(255, 255, 255, 0.8);
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 12vw);
+    grid-template-rows: repeat(3, 16vh);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     font-size: 4rem;

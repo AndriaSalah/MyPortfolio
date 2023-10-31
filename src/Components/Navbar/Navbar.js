@@ -1,5 +1,7 @@
 import React from 'react';
+import cv from '../../Assets/AndriaSalahRoushdy.pdf'
 import './Navbar.css'
+import {FaRegFilePdf} from "react-icons/fa";
 const Navbar = (refProps) => {
     const scrollToProjects =()=> refProps.projRef.current.scrollIntoView()
     const scrollToContact =()=> refProps.contRef.current.scrollIntoView()
@@ -23,6 +25,7 @@ const Navbar = (refProps) => {
                     <button onClick={scrollToContact} className={"link"}>Contact</button>
                 </li>
             </ul>
+            <a className={"link cv"} target="_blank" rel="noreferrer noopener" href={cv} >CV <FaRegFilePdf/></a>
         </nav>
     );
 };

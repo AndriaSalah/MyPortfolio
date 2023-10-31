@@ -5,6 +5,7 @@
     z-index: 10;
     position: sticky;
     top: 1rem;
+    align-items: center;
 }
 .NavBar{
     display: flex;
@@ -19,7 +20,7 @@
 .NavBar li{
     list-style: none;
 }
-.NavBar .link{
+.NavBar .link,.NavBarContainer .link{
     color: var(--TextColor);
     background-color: transparent;
     outline: none;
@@ -30,9 +31,27 @@
     transition-duration: 0.25s;
     padding: 0.5rem 1rem ;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.NavBar .link:hover{
+.NavBar .link:hover,.NavBarContainer .link:hover{
     background-color: white;
     color: black;
+}
+
+.NavBarContainer .cv{
+   position: absolute;
+    right: 5%;
+    background: rgba(2, 2, 2, 0.76);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7rem;
+
+}
+
+.NavBarContainer .cv svg{
+    font-size: 22px;
+
 }

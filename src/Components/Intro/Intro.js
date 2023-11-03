@@ -15,7 +15,7 @@ const Intro = forwardRef ((props, MainContainerRef) => {
     const InView = useInView(imgRef, {amount: 0.9})
 
 
-    const opacityImg_sec1 = useTransform(scrollYProgress, [0.2, 0.4], [1, 0])
+    const opacityImg_sec1 = useTransform(scrollYProgress, [0,0.1, 0.6], [1, 1, 0])
 
 
     const roll = {

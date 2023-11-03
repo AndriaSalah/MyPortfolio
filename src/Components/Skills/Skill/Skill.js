@@ -32,7 +32,7 @@ const Skill = ({title, icon}) => {
             transition: {duration: 0.55}
         },
         hover: {
-            height: "100%",
+            height: "70%",
 
         }
 

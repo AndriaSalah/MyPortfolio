@@ -13,11 +13,11 @@ import {PiFilePdfFill} from "react-icons/pi";
 export const IsMobileContext = createContext({})
 function App() {
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 786);
 
     useEffect(() => {
         function handleResize() {
-            setIsMobile(window.innerWidth <= 1024);
+            setIsMobile(window.innerWidth <= 786);
         }
 
         // Add event listener for window resize
@@ -48,7 +48,7 @@ function App() {
     console.log(isMobile)
     return (
         <div ref={MainContainerRef} className="App">
-            <div style={{position: "absolute", top:0, left:0, width:"100%", height:"100%", pointerEvents:"none"}}></div>
+
             <Navbar skillsRef={SkillRef} aboutRef={aboutRef} projRef={ProjectsRef} contRef={ContactRef}/>
             <a className={"link cv"} download={"Andria_Salah_Roushdy.pdf"} href={cv} >CV <PiFilePdfFill/></a>
             <IsMobileContext.Provider value={isMobile}>

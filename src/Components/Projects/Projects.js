@@ -45,7 +45,7 @@ const Projects = forwardRef( (props,ContainerRef) => {
         offset:["start start" ,"end"]
     })
     console.log(scrollYProgress.current)
-    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-35%"])
+    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-55%"])
     return (
         <div ref={ContainerRef} className={"Projects-container"}>
             <div className={"ghost"}>

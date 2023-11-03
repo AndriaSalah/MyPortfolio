@@ -7,37 +7,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 5vh;
 }
 .Skills h1{
-    padding: 2rem 0 ;
+
     font-weight: lighter;
 }
 
 .SkillsContainer{
     margin-top: 5%;
-    height: 100%;
-    padding: 1rem 0 ;
+    height: 60%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    /*overflow-y: auto;*/
 }
 
 .SkillsContainer .ghost{
-
-    min-width: 12rem;
-    height: 40%;
-
+    margin: 1rem;
+    width: 13%;
+    height: 50%;
 
 }
-@media (max-width: 1024px) {
+@media (max-width: 786px) {
     .Skills{
         font-size: 6vw;
-        padding: 5rem 0rem;
+        padding: 5rem 0;
     }
     .SkillsContainer::-webkit-scrollbar{
         display: none;

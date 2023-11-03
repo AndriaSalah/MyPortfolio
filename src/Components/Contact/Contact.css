@@ -67,7 +67,7 @@
     grid-area: 2 / 2 / 3 / 3;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 786px) {
     .Contact {
         font-size: 5vw;
     }
@@ -88,7 +88,7 @@
     }
 
     .ContactWrapper .text .extra {
-        font-size: 4vw;
+        font-size: 4.5vw;
         margin: 0.5rem 0 0 0;
     }
     .ContactWrapper .Links {

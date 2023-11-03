@@ -64,10 +64,10 @@ const Welcome = forwardRef ((props, MainContainerRef) => {
     }
     const Section2_Txt_animation={
         desktop:{
-            opacity:useTransform(scrollYProgress, [0.34,0.4,0.55], [0,1,0])
+            opacity:useTransform(scrollYProgress, [0.34,0.38,0.43,0.5], [0,1,1,0])
         },
         mobile:{
-            opacity:useTransform(scrollYProgress, [0.34,0.4,0.55], [0,1,0])
+            opacity:useTransform(scrollYProgress, [0.24,0.3,0.4,0.5], [0,1,1,0])
         }
     }
     const Section3_Txt_animation={
@@ -75,7 +75,7 @@ const Welcome = forwardRef ((props, MainContainerRef) => {
             opacity:useTransform(scrollYProgress, [0.53,0.58,0.65,0.87], [0,1,1,0])
         },
         mobile:{
-            opacity:useTransform(scrollYProgress, [0.53,0.58,0.65,0.87], [0,1,1,0])
+            opacity:useTransform(scrollYProgress, [0.53,0.65,0.8], [0,1,0])
         }
     }
 

@@ -106,7 +106,7 @@ html {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 786px) {
     .App .GoTop{
         left: 45%;
     }

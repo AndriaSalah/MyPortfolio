@@ -22,7 +22,7 @@
     overflow-x: hidden ;
     gap: 5rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 786px) {
     .Projects-container{
         font-size: 6vw;
         height: 80vh;

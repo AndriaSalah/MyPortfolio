@@ -6,7 +6,7 @@ const Navbar = (refProps) => {
     const scrollToProjects =()=> refProps.projRef.current.scrollIntoView({block:"end"})
     const scrollToContact =()=> refProps.contRef.current.scrollIntoView()
     const scrollToAbout =()=> refProps.aboutRef.current.scrollIntoView()
-    const scrollToSkills =()=> refProps.skillsRef.current.scrollIntoView()
+    const scrollToSkills =()=> refProps.skillsRef.current.scrollIntoView({block:"center"})
 
     console.log(refProps.projRef)
     return (

@@ -8,6 +8,9 @@
     align-items: center;
 
 }
+.Contact a{
+    cursor: pointer;
+}
 
 .Contact h1 {
     font-weight: lighter;

@@ -33,8 +33,8 @@ const AnimatedText = (
         <motion.p className={className} style={style && {...style}}>
             <motion.span ref={ContainerRef} initial={"hidden"} animate={inView ? "visible" : "hidden"}
                          transition={{delayChildren: delay, staggerChildren: Stagger}}>
-                {text.split(" ").map((word) => (
-                    <span style={{display: "inline-block"}}>
+                {text.split(" ").map((word,index) => (
+                    <span key={index} style={{display: "inline-block"}}>
                     {word.split('').map((letter, index) => (
                         <motion.span style={{display: "inline-block"}} key={index}
                                  variants={DefaultAnimations}>{letter}

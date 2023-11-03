@@ -13,7 +13,8 @@ const Welcome = forwardRef ((props, MainContainerRef) => {
         offset: ["start", "end start"]
     })
 
-    const ImgAnimation = {
+
+    const ImgPopUP_animation = {
         hidden: {
             opacity: 0,
             scale: 0,
@@ -29,7 +30,7 @@ const Welcome = forwardRef ((props, MainContainerRef) => {
             },
         },
     };
-    const InitialAnimation = {
+    const ImgContainer_animation = {
         hidden: {
             width: "35%",
         },
@@ -41,8 +42,6 @@ const Welcome = forwardRef ((props, MainContainerRef) => {
             }
         }
     }
-
-
     const Section1_Img_animation={
         desktop: {
             y:useTransform(scrollYProgress,[0,0.38,0.75],["0","129vh","200vh"]) ,
@@ -90,8 +89,8 @@ const Welcome = forwardRef ((props, MainContainerRef) => {
             <motion.div className="Section1" initial={"hidden"} animate={"visible"} >
                 <motion.div
                     className="ImageContainer"
-                    variants={InitialAnimation}>
-                    <motion.img  style={isMobile? Section1_Img_animation.mobile : Section1_Img_animation.desktop} variants={ImgAnimation} src={myPhoto} alt="myPhoto"/>
+                    variants={ImgContainer_animation}>
+                    <motion.img  style={isMobile? Section1_Img_animation.mobile : Section1_Img_animation.desktop} variants={ImgPopUP_animation} src={myPhoto} alt="myPhoto"/>
                 </motion.div>
                 <motion.div className="TextContainer">
                     <AnimatedText text={"Hello, My name is Andria !"}  style={isMobile? Section1_Txt_animation.mobile : Section1_Txt_animation.desktop}/>

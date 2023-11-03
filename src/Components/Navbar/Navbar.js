@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import cv from '../../Assets/AndriaSalahRoushdy.pdf'
 import './Navbar.css'
 import {PiFilePdfFill} from "react-icons/pi";
+import {IsMobileContext} from "../../App";
 const Navbar = (refProps) => {
-    const scrollToProjects =()=> refProps.projRef.current.scrollIntoView({block:"end"})
+    const isMobile = useContext(IsMobileContext)
+
+    const scrollToProjects =()=> refProps.projRef.current.scrollIntoView({block:isMobile? "end" : "start"})
     const scrollToContact =()=> refProps.contRef.current.scrollIntoView()
     const scrollToAbout =()=> refProps.aboutRef.current.scrollIntoView()
     const scrollToSkills =()=> refProps.skillsRef.current.scrollIntoView({block:"center"})
 
-    console.log(refProps.projRef)
     return (
         <nav className={"NavBarContainer"}>
             <ul className={"NavBar"}>

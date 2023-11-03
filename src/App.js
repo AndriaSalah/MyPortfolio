@@ -29,7 +29,6 @@ function App() {
         };
     }, []);
 
-    console.log(isMobile);
 
 
     const ProjectsRef = useRef(null)
@@ -37,21 +36,19 @@ function App() {
     const aboutRef = useRef(null)
     const welcomeRef = useRef(null)
     const SkillRef = useRef(null)
-    const MoveToTop = () => welcomeRef.current.scrollIntoView()
+
     const MainContainerRef = useRef(null)
     const {scrollYProgress} = useScroll({
         target: MainContainerRef,
         offset: ["start", "end start"]
     })
     const ButtonOpacity = useTransform(scrollYProgress, [0.2, 0.23], [0, 1])
-    // const ButtonEnabled=useTransform(scrollYProgress,[0.2,0.3],["none","block"])
-    console.log(isMobile)
+    const MoveToTop = () => welcomeRef.current.scrollIntoView()
     return (
         <div ref={MainContainerRef} className="App">
-
+            <IsMobileContext.Provider value={isMobile}>
             <Navbar skillsRef={SkillRef} aboutRef={aboutRef} projRef={ProjectsRef} contRef={ContactRef}/>
             <a className={"link cv"} download={"Andria_Salah_Roushdy.pdf"} href={cv} >CV <PiFilePdfFill/></a>
-            <IsMobileContext.Provider value={isMobile}>
                 <Welcome ref={welcomeRef}/>
                 <Intro ref={aboutRef}/>
                 <Projects ref={ProjectsRef}/>

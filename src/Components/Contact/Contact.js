@@ -8,100 +8,100 @@ import github from '../../Assets/Contact/github.png'
 import mail from '../../Assets/Contact/email.png'
 import {motion, useInView} from "framer-motion";
 import {IsMobileContext} from "../../App";
+import AppLink from "../AppLink";
 
-const Contact = forwardRef ((props, MainContainer) => {
+const Contact = forwardRef((props, MainContainer) => {
     const isMobile = useContext(IsMobileContext)
-    const icon1Animation={
-        initial:{
-            opacity:0,
-            x:150,
-
-        },
-        animate:{
-            opacity: 1,
-            x:0,
-            transition:{
-                type:"spring",
-                mass:1.3
-            }
-        }
-    }
-    const icon2Animation={
-        initial:{
-            opacity:0,
-            y:-150
-        },
-        animate:{
-            opacity: 1,
-            y:0,
-            transition:{
-                type:"spring",
-                mass:1.3
-            }
-        }
-    }
-    const icon3Animation={
-        initial:{
-            opacity:0,
-            x:-150,
-
-        },
-        animate:{
-            opacity: 1,
-            x:0,
-            transition:{
-                type:"spring",
-                mass:1.3
-            }
-        }
-    }
-    const icon4Animation={
-        initial:{
-            opacity:0,
-            y:150
-        },
-        animate:{
-            opacity: 1,
-            y:0,
-            transition:{
-                type:"spring",
-                mass:1.3
-            }
-        }
-    }
-    const icon5Animation={
-        initial:{
-            opacity:0,
-            rotate:180,
-            // scale: 0
-        },
-        animate:{
-            opacity: 1,
-            rotate: 0,
-            // scale:1,
-            transition:{
-                type:"spring",
-                mass:1.3
-            }
-        },
-        hover:{
-            scale:1.2
-        }
-    }
-    const testAnimation={
-
+    const Icons_animation = {
+        Icon1: {
             initial: {
-                x: isMobile? "0":"45%",
-                y: isMobile? "20vh":"0"
+                opacity: 0,
+                x: 150,
+
             },
             animate: {
+                opacity: 1,
                 x: 0,
+                transition: {
+                    type: "spring",
+                    mass: 1.3
+                }
+            }
+        },
+        Icon2: {
+            initial: {
+                opacity: 0,
+                y: -150
+            },
+            animate: {
+                opacity: 1,
                 y: 0,
                 transition: {
                     type: "spring",
-                    delay: 3.5
+                    mass: 1.3
                 }
             }
+        },
+        Icon3: {
+            initial: {
+                opacity: 0,
+                x: -150,
+
+            },
+            animate: {
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: "spring",
+                    mass: 1.3
+                }
+            }
+        },
+        Icon4: {
+            initial: {
+                opacity: 0,
+                y: 150
+            },
+            animate: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: "spring",
+                    mass: 1.3
+                }
+            }
+        },
+        Icon5: {
+            initial: {
+                opacity: 0,
+                rotate: 180,
+                // scale: 0
+            },
+            animate: {
+                opacity: 1,
+                rotate: 0,
+                // scale:1,
+                transition: {
+                    type: "spring",
+                    mass: 1.3
+                }
+            },
+        }
+    }
+    const Contact_Text_animation = {
+
+        initial: {
+            x: isMobile ? "0" : "45%",
+            y: isMobile ? "20vh" : "0"
+        },
+        animate: {
+            x: 0,
+            y: 0,
+            transition: {
+                type: "spring",
+                delay: 3.5
+            }
+        }
     }
 
 
@@ -109,27 +109,34 @@ const Contact = forwardRef ((props, MainContainer) => {
     return (
         <div ref={MainContainer} className={"Contact"}>
             <div className={"ContactWrapper"}>
-                <motion.div className={"text"} initial={"initial"} animate={ inView?"animate":"initial"} variants={testAnimation} >
+                <motion.div className={"text"} initial={"initial"} animate={inView ? "animate" : "initial"}
+                            variants={Contact_Text_animation}>
                     <div>
                         <h3><AnimatedText text={"Got a design in mind ?"}/></h3>
                         <AnimatedText delay={1.5} className={"extra"} text={"Hit me up and let's build it together !"}/>
                     </div>
                 </motion.div>
-                <motion.div initial={"initial"} animate={ inView?"animate":"initial"}  transition={{delayChildren:isMobile?4 : 3.5,staggerChildren:0.3}}  className="Links">
-                    <motion.div variants={icon1Animation} whileHover={{scale:1.2}} className="div1">
-                        <a href={"https://www.linkedin.com/in/andria-salah-2a4133183/"} target="_blank" rel="noreferrer noopener" ><img src={linkedIn} alt={""}/></a>
+                <motion.div initial={"initial"} animate={inView ? "animate" : "initial"}
+                            transition={{delayChildren: isMobile ? 4 : 3.5, staggerChildren: 0.3}} className="Links">
+                    <motion.div variants={Icons_animation.Icon1} whileHover={{scale: 1.2}} className="div1">
+                        <AppLink appLink={ "linkedin://profile/andria-salah-2a4133183"} webLink={"https://www.linkedin.com/in/andria-salah-2a4133183/"}>
+                            <img src={linkedIn} alt={""}/></AppLink>
                     </motion.div>
-                    <motion.div variants={icon2Animation} whileHover={{scale:1.2}} className="div2">
-                       <a href={"https://www.facebook.com/andria.salah"} target="_blank" rel="noreferrer noopener" ><img src={facebook} alt={""}/></a>
+                    <motion.div variants={Icons_animation.Icon2} whileHover={{scale: 1.2}} className="div2">
+                        <AppLink appLink={"fb://profile/andria.salah"} webLink={"https://www.facebook.com/andria.salah"}>
+                            <img src={facebook} alt={""}/></AppLink>
                     </motion.div>
-                    <motion.div variants={icon3Animation} whileHover={{scale:1.2}} className="div3">
-                        <a href={"https://discordapp.com/users/304239529391423488"} target="_blank" rel="noreferrer noopener" ><img src={discord} alt={""}/></a>
+                    <motion.div variants={Icons_animation.Icon3} whileHover={{scale: 1.2}} className="div3">
+                        <a href={"https://discordapp.com/users/304239529391423488"} target="_blank"
+                           rel="noreferrer noopener"><img src={discord} alt={""}/></a>
                     </motion.div>
-                    <motion.div variants={icon4Animation} whileHover={{scale:1.2}} className="div4">
-                        <a href={"https://github.com/AndriaSalah"} target="_blank" rel="noreferrer noopener" ><img src={github} alt={""}/></a>
+                    <motion.div variants={Icons_animation.Icon4} whileHover={{scale: 1.2}} className="div4">
+                        <a href={"https://github.com/AndriaSalah"} target="_blank" rel="noreferrer noopener"><img
+                            src={github} alt={""}/></a>
                     </motion.div>
-                    <motion.div variants={icon5Animation} whileHover={{scale:1.2}} className="div5">
-                        <a href={"mailto: andriasalah.r@hotomail.com"} target="_blank" rel="noreferrer noopener" ><img src={mail} alt={""}/></a>
+                    <motion.div variants={Icons_animation.Icon5} whileHover={{scale: 1.2}} className="div5">
+                        <a href={"mailto: andriasalah.r@hotomail.com"} target="_blank" rel="noreferrer noopener"><img
+                            src={mail} alt={""}/></a>
                     </motion.div>
                 </motion.div>
             </div>

@@ -64,8 +64,8 @@ const Skills = forwardRef ((props, ref) => {
         <div ref={ref} className={"Skills"}>
             <h1><AnimatedText text={"SKILLS"} /></h1>
             <div className={"SkillsContainer"}>
-                {SkillsData.map((skill)=>(
-                    <Skill title={skill.title} icon={skill.icon} />
+                {SkillsData.map((skill,index)=>(
+                    <Skill key={index} title={skill.title} icon={skill.icon} />
                 ))}
             </div>
         </div>

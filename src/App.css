@@ -73,29 +73,14 @@ html {
 
 }
 
-.link {
-    color: var(--TextColor);
-    background-color: transparent;
-    outline: none;
-    border: 0;
-    border-bottom: 1px solid transparent;
-    border-radius: 10px;
-    font-size: 19px;
-    transition-duration: 0.25s;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.link:hover {
-    background-color: white;
-    color: black;
-}
 
 .cv {
+    height: 3rem;
+    font-weight: bold;
+    font-size: 19px;
     position: fixed;
-    right: 5%;
-    top: 2rem;
+    right: 17%;
+    top: 2.1%;
     background: rgba(2, 2, 2, 0.89);
     border-radius: 25px;
     display: flex;
@@ -103,7 +88,16 @@ html {
     justify-content: space-evenly;
     width: 7rem;
     z-index: 10;
+    transition-duration: 0.25s;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 
+}
+.cv:hover {
+    background-color: white;
+    color: black;
 }
 
 @media (max-width: 786px) {
@@ -111,7 +105,6 @@ html {
         left: 45%;
     }
     .cv {
-        position: fixed;
         top: unset;
         right: 2%;
         bottom: 5.5%;

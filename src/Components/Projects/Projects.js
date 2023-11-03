@@ -12,39 +12,37 @@ import ludosIcon from '../../Assets/Projects/test.png'
 import ludosWallpaper from '../../Assets/Projects/LudosWallpaper1.png'
 import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
-const ProjectsData =[
-    {
-        Wallpaper:Ecommerce,
-        Icon:EcommerceIcon,
-        link:"https://andrias-ecom.vercel.app"
-    },
-    {
-        Wallpaper:MusicPlayer,
-        Icon:icon,
-        link:"https://andrias-music.vercel.app"
-    },
-    {
-        Wallpaper:ludosWallpaper,
-        Icon:ludosIcon,
-        link:"https://github.com/LUDOOS/Ludos"
-    },
-    {
-        Wallpaper:Todo,
-        Icon:icon,
-        link:"https://andrias-expense-tracker.vercel.app"
-    },
-
-]
-
 
 const Projects = forwardRef( (props,ContainerRef) => {
-    // const ContainerRef = useRef(null)
+
+    const ProjectsData =[
+        {
+            Wallpaper:Ecommerce,
+            Icon:EcommerceIcon,
+            link:"https://andrias-ecom.vercel.app"
+        },
+        {
+            Wallpaper:MusicPlayer,
+            Icon:icon,
+            link:"https://andrias-music.vercel.app"
+        },
+        {
+            Wallpaper:ludosWallpaper,
+            Icon:ludosIcon,
+            link:"https://github.com/LUDOOS/Ludos"
+        },
+        {
+            Wallpaper:Todo,
+            Icon:icon,
+            link:"https://andrias-expense-tracker.vercel.app"
+        },
+
+    ]
     const isMobile=useContext(IsMobileContext)
     const {scrollYProgress} = useScroll({
         target:ContainerRef,
         offset:["start start" ,"end"]
     })
-    console.log(scrollYProgress.current)
     const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-55%"])
     return (
         <div ref={ContainerRef} className={"Projects-container"}>

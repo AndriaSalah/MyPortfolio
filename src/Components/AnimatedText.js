@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {motion, useInView} from "framer-motion";
 
 
+
 const AnimatedText = (
     {
         text,
@@ -28,6 +29,7 @@ const AnimatedText = (
     const ContainerRef = useRef(null)
     const inView = useInView(ContainerRef, {amount: 0.7, once: once})
     return (
+
         <motion.p className={className} style={style && {...style}}>
             <motion.span ref={ContainerRef} initial={"hidden"} animate={inView ? "visible" : "hidden"}
                          transition={{delayChildren: delay, staggerChildren: Stagger}}>

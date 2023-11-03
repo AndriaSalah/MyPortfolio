@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import './Project.css'
 import {motion} from "framer-motion";
+import {IsMobileContext} from "../../../App";
 
 const Project = ({wallpaper,icon}) => {
+    const isMobile= useContext(IsMobileContext)
     const wallpaperAnimation = {
         initial:{
             width: "32vw"
@@ -19,7 +21,7 @@ const Project = ({wallpaper,icon}) => {
         }
     }
     return (
-        <motion.div initial="initial" whileHover="hover" className={"Project"}>
+        <motion.div initial={!isMobile ? "initial":""} whileHover={!isMobile ? "hover":""} className={"Project"}>
             <motion.div className={"wallpaper"}><motion.img variants={wallpaperAnimation}  src={wallpaper} alt={"ecommerce"}/></motion.div>
             <motion.div variants={iconAnimation} className={"icon"}><img src={icon} alt={"icon"}/></motion.div>
         </motion.div>

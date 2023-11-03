@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     z-index: 10;
-    position: sticky;
+    position: fixed;
     top: 1rem;
     align-items: center;
 }
@@ -42,7 +42,7 @@
 .NavBarContainer .cv{
    position: absolute;
     right: 5%;
-    background: rgba(2, 2, 2, 0.76);
+    background: rgba(2, 2, 2, 0.89);
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -53,5 +53,11 @@
 
 .NavBarContainer .cv svg{
     font-size: 22px;
+
+}
+@media (max-width: 1024px) {
+    .NavBar{
+        width: 95%;
+    }
 
 }

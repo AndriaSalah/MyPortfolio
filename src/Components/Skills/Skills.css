@@ -11,22 +11,38 @@
     font-size: 5vh;
 }
 .Skills h1{
-
+    padding: 2rem 0 ;
     font-weight: lighter;
 }
 
 .SkillsContainer{
     margin-top: 5%;
-    height: 60%;
+    height: 100%;
+    padding: 1rem 0 ;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-y: auto;
 }
 
 .SkillsContainer .ghost{
     margin: 1rem;
-    width: 13%;
-    height: 50%;
+    min-width: 9rem;
+    height: 40%;
 
+}
+@media (max-width: 1024px) {
+    .Skills{
+        font-size: 6vw;
+        padding: 5rem 0rem;
+    }
+    .SkillsContainer::-webkit-scrollbar{
+        display: none;
+    }
+    .SkillsContainer .ghost{
+        min-width: unset;
+        width: 23vw;
+        height: 20%;
+    }
 }

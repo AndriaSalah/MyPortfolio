@@ -1,9 +1,9 @@
 import React from 'react';
 import cv from '../../Assets/AndriaSalahRoushdy.pdf'
 import './Navbar.css'
-import {FaRegFilePdf} from "react-icons/fa";
+import {PiFilePdfFill} from "react-icons/pi";
 const Navbar = (refProps) => {
-    const scrollToProjects =()=> refProps.projRef.current.scrollIntoView()
+    const scrollToProjects =()=> refProps.projRef.current.scrollIntoView({block:"end"})
     const scrollToContact =()=> refProps.contRef.current.scrollIntoView()
     const scrollToAbout =()=> refProps.aboutRef.current.scrollIntoView()
     const scrollToSkills =()=> refProps.skillsRef.current.scrollIntoView()
@@ -13,7 +13,7 @@ const Navbar = (refProps) => {
         <nav className={"NavBarContainer"}>
             <ul className={"NavBar"}>
                 <li>
-                    <button onClick={scrollToAbout} className={"link"}>About me</button>
+                    <button onClick={scrollToAbout} className={"link"}>About</button>
                 </li>
                 <li>
                     <button onClick={scrollToProjects} className={"link"}>Projects</button>
@@ -25,7 +25,6 @@ const Navbar = (refProps) => {
                     <button onClick={scrollToContact} className={"link"}>Contact</button>
                 </li>
             </ul>
-            <a className={"link cv"} target="_blank" rel="noreferrer noopener" href={cv} >CV <FaRegFilePdf/></a>
         </nav>
     );
 };

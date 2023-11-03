@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useContext} from 'react';
 import './Projects.css'
 import Project from "./Project/Project";
 import {useScroll, useTransform,motion} from "framer-motion";
@@ -8,9 +8,10 @@ import Ecommerce from '../../Assets/Projects/Ecom.png'
 import EcommerceIcon from '../../Assets/Projects/EcommerceIcon.svg'
 import MusicPlayer from '../../Assets/Projects/M.png'
 import Todo from '../../Assets/Projects/todo.png'
-import ludosIcon from '../../Assets/Projects/ludosIcon.png'
+import ludosIcon from '../../Assets/Projects/test.png'
 import ludosWallpaper from '../../Assets/Projects/LudosWallpaper1.png'
 import AnimatedText from "../AnimatedText";
+import {IsMobileContext} from "../../App";
 const ProjectsData =[
     {
         Wallpaper:Ecommerce,
@@ -34,21 +35,24 @@ const ProjectsData =[
     },
 
 ]
+
+
 const Projects = forwardRef( (props,ContainerRef) => {
     // const ContainerRef = useRef(null)
+    const isMobile=useContext(IsMobileContext)
     const {scrollYProgress} = useScroll({
         target:ContainerRef,
         offset:["start start" ,"end"]
     })
     console.log(scrollYProgress.current)
-    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-60%"])
+    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-35%"])
     return (
         <div ref={ContainerRef} className={"Projects-container"}>
             <div className={"ghost"}>
                 <h1><AnimatedText text={"PROJECTS"} /></h1>
-                <motion.div className={"Projects-wrapper"} style={{x:ScrollX}}>
-                    {ProjectsData.map((project)=>(
-                       [<a href={project.link} target="_blank" rel="noreferrer noopener"><Project wallpaper={project.Wallpaper} icon={project.Icon}/></a>]
+                <motion.div className={"Projects-wrapper"} style={{x: isMobile? 0:ScrollX}}>
+                    {ProjectsData.map((project,index)=>(
+                       [<a href={project.link} key={index} target="_blank" rel="noreferrer noopener"><Project wallpaper={project.Wallpaper} icon={project.Icon}/></a>]
                     ))}
                 </motion.div>
             </div>

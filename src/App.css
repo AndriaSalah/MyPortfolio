@@ -25,15 +25,15 @@
 .App .GoTop {
     position: fixed;
     bottom: 5%;
-    left: 50%;
+    left: 45vw;
     z-index: 10;
     border-radius: 50%;
     /*padding: 1.2rem 0;*/
     width: 3rem;
     height: 3rem;
-    font-size:32px;
+    font-size: 32px;
     background: black;
-    border: 2px solid rgb(61, 44, 128) ;
+    border: 2px solid rgb(61, 44, 128);
     color: rgb(61, 44, 128);
     cursor: pointer;
     transition-duration: 0.25s;
@@ -43,6 +43,7 @@
     background: rgb(61, 44, 128);
     color: black;
 }
+
 html {
     scroll-behavior: smooth;
 
@@ -70,4 +71,47 @@ html {
     background: linear-gradient(160deg, rgb(87, 87, 87) 0%, rgb(61, 44, 128) 50%);;
     border-radius: 10px;
 
+}
+
+.link {
+    color: var(--TextColor);
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 19px;
+    transition-duration: 0.25s;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: white;
+    color: black;
+}
+
+.cv {
+    position: fixed;
+    right: 5%;
+    top: 2rem;
+    background: rgba(2, 2, 2, 0.89);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7rem;
+    z-index: 10;
+
+}
+
+@media (max-width: 1024px) {
+
+    .cv {
+        position: fixed;
+        top: unset;
+        right: 2%;
+        bottom: 5.5%;
+    }
 }

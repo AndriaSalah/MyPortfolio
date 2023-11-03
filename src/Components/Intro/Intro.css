@@ -17,9 +17,22 @@
     padding: 0 4rem;
 }
 .IntroContainer img{
+    aspect-ratio: 1/1;
     margin-top: 3rem;
     width: 15rem;
-    height: 15rem;
     object-fit: cover;
     border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+    .IntroContainer{
+
+        font-size: 5vw;
+    }
+    .Intro .TextContainer{
+        padding: 0 2rem;
+    }
+    .IntroContainer img{
+        width: 10rem;
+    }
 }

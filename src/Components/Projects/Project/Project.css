@@ -8,7 +8,7 @@
     position: relative;
     border-radius: 25px;
     transition-duration: 0.5s;
-    margin-right: 5rem ;
+
 
 }
 .Project .wallpaper img{
@@ -39,13 +39,27 @@
     width: 3vw;
 
 }
-/*.Project:hover .wallpaper img{*/
-/*    !*scale: 1.5;*!*/
-/*    width: 40rem;*/
 
-/*}*/
-/*.Project:hover .icon{*/
-/*    !*scale: 1.5;*!*/
-/*    bottom: -40%;*/
 
-/*}*/
+@media (max-width: 1024px) {
+
+    .Project .wallpaper{
+        height: 60vw;
+    }
+    .Project .wallpaper img{
+        width: 90vw;
+        height: 50vw;
+        border-radius: 5px ;
+        filter: brightness(1);
+    }
+    .Project .icon{
+        width: 13vw;
+        height: 10vw;
+        bottom: 2vh;
+    }
+    .Project .icon img{
+        border-radius: 10px;
+        width: 60%;
+
+    }
+}

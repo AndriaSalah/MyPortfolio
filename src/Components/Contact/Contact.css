@@ -5,9 +5,8 @@
     text-align: center;
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+
 }
 
 .Contact h1 {
@@ -66,4 +65,46 @@
 
 .div5 {
     grid-area: 2 / 2 / 3 / 3;
+}
+
+@media (max-width: 1024px) {
+    .Contact {
+        font-size: 5vw;
+    }
+    .ContactWrapper {
+        height: 100%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .ContactWrapper .text {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .ContactWrapper .text .extra {
+        font-size: 4vw;
+        margin: 0.5rem 0 0 0;
+    }
+    .ContactWrapper .Links {
+        width: 100%;
+        color: rgba(255, 255, 255, 0.8);
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 12vh);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+
+    }
+    .ContactWrapper .Links img{
+        aspect-ratio: 1/1;
+        width: 48px;
+    }
+
 }

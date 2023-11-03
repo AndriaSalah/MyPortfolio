@@ -12,7 +12,7 @@ const Intro = forwardRef ((props, MainContainerRef) => {
         offset: ["start", "end start"]
     })
     const imgRef = useRef(null)
-    const InView = useInView(imgRef, {amount: 0.7})
+    const InView = useInView(imgRef, {amount: 0.9})
 
 
     const opacityImg_sec1 = useTransform(scrollYProgress, [0.2, 0.4], [1, 0])

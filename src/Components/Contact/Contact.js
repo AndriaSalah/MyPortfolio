@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useContext} from 'react';
 import './Contact.css'
 import AnimatedText from "../AnimatedText";
 import linkedIn from '../../Assets/Contact/linkedin.png'
@@ -7,9 +7,10 @@ import discord from '../../Assets/Contact/discord.png'
 import github from '../../Assets/Contact/github.png'
 import mail from '../../Assets/Contact/email.png'
 import {motion, useInView} from "framer-motion";
+import {IsMobileContext} from "../../App";
 
 const Contact = forwardRef ((props, MainContainer) => {
-
+    const isMobile = useContext(IsMobileContext)
     const icon1Animation={
         initial:{
             opacity:0,
@@ -88,16 +89,19 @@ const Contact = forwardRef ((props, MainContainer) => {
         }
     }
     const testAnimation={
-        initial:{
-            x:"45%",
-        },
-        animate:{
-           x:0,
-            transition:{
-              type:"spring",
-               delay:3.5
+
+            initial: {
+                x: isMobile? "0":"45%",
+                y: isMobile? "20vh":"0"
+            },
+            animate: {
+                x: 0,
+                y: 0,
+                transition: {
+                    type: "spring",
+                    delay: 3.5
+                }
             }
-        }
     }
 
 
@@ -105,13 +109,13 @@ const Contact = forwardRef ((props, MainContainer) => {
     return (
         <div ref={MainContainer} className={"Contact"}>
             <div className={"ContactWrapper"}>
-                <motion.div className={"text"} initial={testAnimation.initial} animate={inView? testAnimation.animate: testAnimation.initial} >
+                <motion.div className={"text"} initial={"initial"} animate={ inView?"animate":"initial"} variants={testAnimation} >
                     <div>
                         <h3><AnimatedText text={"Got a design in mind ?"}/></h3>
                         <AnimatedText delay={1.5} className={"extra"} text={"Hit me up and let's build it together !"}/>
                     </div>
                 </motion.div>
-                <motion.div initial={"initial"} animate={ inView?"animate":"initial"} transition={{delayChildren:3.5,staggerChildren:0.3}}  className="Links">
+                <motion.div initial={"initial"} animate={ inView?"animate":"initial"}  transition={{delayChildren:isMobile?4 : 3.5,staggerChildren:0.3}}  className="Links">
                     <motion.div variants={icon1Animation} whileHover={{scale:1.2}} className="div1">
                         <a href={"https://www.linkedin.com/in/andria-salah-2a4133183/"} target="_blank" rel="noreferrer noopener" ><img src={linkedIn} alt={""}/></a>
                     </motion.div>

@@ -22,7 +22,6 @@ const Intro = forwardRef ((props, MainContainerRef) => {
         hidden: {
             x: "70rem",
             rotate: 360,
-            scale:0
         },
         visible: {
             x: "-70rem",

@@ -1,10 +1,12 @@
-import React, {useRef} from 'react';
+import React, {useContext, useRef} from 'react';
 import AnimatedText from "../../AnimatedText";
 import './Skill.css'
 import {motion, useInView} from "framer-motion";
+import {IsMobileContext} from "../../../App";
 
 const Skill = ({title, icon}) => {
 
+    const isMobile = useContext(IsMobileContext)
     const imgAnimation = {
         hidden: {
             opacity: 0,
@@ -30,7 +32,7 @@ const Skill = ({title, icon}) => {
             transition: {duration: 0.55}
         },
         hover: {
-            height: "80%",
+            height: "100%",
 
         }
 
@@ -57,7 +59,7 @@ const Skill = ({title, icon}) => {
     return (
         <div className={"ghost"}>
         <motion.div variants={skillAnimation} ref={skillRef} initial={"hidden"} animate={inView ? "animate" : "hidden"}
-                    whileHover={"hover"} className={"Skill"}>
+                    whileHover={isMobile?"":"hover"} className={"Skill"}>
 
                 <motion.div variants={textAnimation}>
                     <AnimatedText text={title} Stagger={0} delay={0.25} once={false} hover={true} move={"up-down"}/>

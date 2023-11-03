@@ -23,13 +23,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: auto;
+    gap: 2rem;
+    /*overflow-y: auto;*/
 }
 
 .SkillsContainer .ghost{
-    margin: 1rem;
-    min-width: 9rem;
+
+    min-width: 12rem;
     height: 40%;
+
 
 }
 @media (max-width: 1024px) {

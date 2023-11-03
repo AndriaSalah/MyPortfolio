@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from "./Components/Navbar/Navbar";
 import Welcome from "./Components/Welcome/Welcome";
-import React, {createContext, useRef} from "react";
+import React, {createContext, useEffect, useRef, useState} from "react";
 import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import Contact from "./Components/Contact/Contact";
@@ -13,7 +13,24 @@ import {PiFilePdfFill} from "react-icons/pi";
 export const IsMobileContext = createContext({})
 function App() {
 
-    const isMobile = window.innerWidth < 768
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+    useEffect(() => {
+        function handleResize() {
+            setIsMobile(window.innerWidth <= 1024);
+        }
+
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    console.log(isMobile);
+
 
     const ProjectsRef = useRef(null)
     const ContactRef = useRef(null)

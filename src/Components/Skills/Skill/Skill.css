@@ -3,14 +3,14 @@
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
-    height: 40%;
-    padding: 0 3rem;
+    height: fit-content;
+    /*padding: 0 3rem;*/
     justify-content: center;
     gap: 1rem;
     align-items: center;
     color: white;
     font-size: clamp(15px,3vw,24px);
-    margin-left: 0.2rem;
+    /*margin-left: 0.2rem;*/
     border-radius: 50px;
     background-image: linear-gradient(160deg, transparent 25% , rgb(51, 51, 59) 100%);
     z-index:1;
@@ -45,5 +45,8 @@
 @media (max-width: 1024px) {
     .Skill img{
         width: 10vw;
+    }
+    .Skill p{
+        display: none;
     }
 }

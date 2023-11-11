@@ -14,7 +14,6 @@ import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
 
 const Projects = forwardRef( (props,ContainerRef) => {
-
     const ProjectsData =[
         {
             Wallpaper:Ecommerce,

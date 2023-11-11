@@ -44,11 +44,12 @@ function App() {
     })
     const ButtonOpacity = useTransform(scrollYProgress, [0.2, 0.23], [0, 1])
     const MoveToTop = () => welcomeRef.current.scrollIntoView()
+
     return (
         <div ref={MainContainerRef} className="App">
             <IsMobileContext.Provider value={isMobile}>
             <Navbar skillsRef={SkillRef} aboutRef={aboutRef} projRef={ProjectsRef} contRef={ContactRef}/>
-            <a className={"link cv"} download={"Andria_Salah_Roushdy.pdf"} href={cv} >CV <PiFilePdfFill/></a>
+            <a className={"cv"} download={"Andria_Salah_Roushdy.pdf"} href={cv} >CV <PiFilePdfFill/></a>
                 <Welcome ref={welcomeRef}/>
                 <Intro ref={aboutRef}/>
                 <Projects ref={ProjectsRef}/>

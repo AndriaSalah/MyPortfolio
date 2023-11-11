@@ -43,6 +43,32 @@
     background: rgb(61, 44, 128);
     color: black;
 }
+.cv {
+    height: 3rem;
+    font-weight: bold;
+    font-size: 19px;
+    position: fixed;
+    right: 2%;
+    bottom: 5vh;
+    background: rgba(2, 2, 2, 0.89);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7rem;
+    z-index: 10;
+    transition-duration: 0.25s;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: 2px solid rgb(61, 44, 128) ;
+
+}
+.cv:hover {
+    background-color:rgb(61, 44, 128);
+    color: white;
+}
 
 html {
     scroll-behavior: smooth;
@@ -74,39 +100,13 @@ html {
 }
 
 
-.cv {
-    height: 3rem;
-    font-weight: bold;
-    font-size: 19px;
-    position: fixed;
-    right: 17%;
-    top: 2.1%;
-    background: rgba(2, 2, 2, 0.89);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 7rem;
-    z-index: 10;
-    transition-duration: 0.25s;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
 
-}
-.cv:hover {
-    background-color: white;
-    color: black;
-}
 
 @media (max-width: 786px) {
     .App .GoTop{
         left: 45%;
     }
-    .cv {
-        top: unset;
-        right: 2%;
-        bottom: 5.5%;
+    .cv{
+        border: none;
     }
 }

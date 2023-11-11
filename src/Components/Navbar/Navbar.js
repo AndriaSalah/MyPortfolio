@@ -1,7 +1,5 @@
 import React, {useContext} from 'react';
-import cv from '../../Assets/AndriaSalahRoushdy.pdf'
 import './Navbar.css'
-import {PiFilePdfFill} from "react-icons/pi";
 import {IsMobileContext} from "../../App";
 const Navbar = (refProps) => {
     const isMobile = useContext(IsMobileContext)

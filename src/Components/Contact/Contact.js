@@ -8,7 +8,6 @@ import github from '../../Assets/Contact/github.png'
 import mail from '../../Assets/Contact/email.png'
 import {motion, useInView} from "framer-motion";
 import {IsMobileContext} from "../../App";
-import AppLink from "../AppLink";
 
 const Contact = forwardRef((props, MainContainer) => {
     const isMobile = useContext(IsMobileContext)
@@ -119,12 +118,12 @@ const Contact = forwardRef((props, MainContainer) => {
                 <motion.div initial={"initial"} animate={inView ? "animate" : "initial"}
                             transition={{delayChildren: isMobile ? 4 : 3.5, staggerChildren: 0.3}} className="Links">
                     <motion.div variants={Icons_animation.Icon1} whileHover={{scale: 1.2}} className="div1">
-                        <AppLink appLink={ "linkedin://profile/andria-salah-2a4133183"} webLink={"https://www.linkedin.com/in/andria-salah-2a4133183/"}>
-                            <img src={linkedIn} alt={""}/></AppLink>
+                        <a href={"https://www.linkedin.com/in/andria-salah-2a4133183/"} target="_blank"
+                           rel="noreferrer noopener"><img src={linkedIn} alt={""}/></a>
                     </motion.div>
                     <motion.div variants={Icons_animation.Icon2} whileHover={{scale: 1.2}} className="div2">
-                        <AppLink appLink={"fb://profile/andria.salah"} webLink={"https://www.facebook.com/andria.salah"}>
-                            <img src={facebook} alt={""}/></AppLink>
+                        <a href={"https://www.facebook.com/andria.salah"} target="_blank" rel="noreferrer noopener"><img
+                            src={facebook} alt={""}/></a>
                     </motion.div>
                     <motion.div variants={Icons_animation.Icon3} whileHover={{scale: 1.2}} className="div3">
                         <a href={"https://discordapp.com/users/304239529391423488"} target="_blank"

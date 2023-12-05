@@ -8,8 +8,8 @@ import Ecommerce from '../../Assets/Projects/Ecom.webp'
 import EcommerceIcon from '../../Assets/Projects/EcommerceIcon.svg'
 import MusicPlayer from '../../Assets/Projects/MusicPlayer.webp'
 import Todo from '../../Assets/Projects/todo.webp'
-import ludosIcon from '../../Assets/Projects/Ludosicon.png'
-import ludosWallpaper from '../../Assets/Projects/LudosWallpaper.webp'
+// import ludosIcon from '../../Assets/Projects/Ludosicon.png'
+// import ludosWallpaper from '../../Assets/Projects/LudosWallpaper.webp'
 import WeatherIcon from '../../Assets/Projects/WeatherIcon.svg'
 import WeatherWallpaper from '../../Assets/Projects/Weather.webp'
 import AnimatedText from "../AnimatedText";
@@ -32,11 +32,11 @@ const Projects = forwardRef( (props,ContainerRef) => {
             Icon:icon,
             link:"https://andrias-music.vercel.app"
         },
-        {
-            Wallpaper:ludosWallpaper,
-            Icon:ludosIcon,
-            link:"https://github.com/LUDOOS/Ludos"
-        },
+        // {
+        //     Wallpaper:ludosWallpaper,
+        //     Icon:ludosIcon,
+        //     link:"https://github.com/LUDOOS/Ludos"
+        // },
         {
             Wallpaper:Todo,
             Icon:icon,

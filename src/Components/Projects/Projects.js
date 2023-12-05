@@ -4,17 +4,24 @@ import Project from "./Project/Project";
 import {useScroll, useTransform,motion} from "framer-motion";
 
 import icon from "../../logo.svg";
-import Ecommerce from '../../Assets/Projects/Ecom.png'
+import Ecommerce from '../../Assets/Projects/Ecom.webp'
 import EcommerceIcon from '../../Assets/Projects/EcommerceIcon.svg'
-import MusicPlayer from '../../Assets/Projects/M.png'
-import Todo from '../../Assets/Projects/todo.png'
-import ludosIcon from '../../Assets/Projects/test.png'
-import ludosWallpaper from '../../Assets/Projects/LudosWallpaper1.png'
+import MusicPlayer from '../../Assets/Projects/MusicPlayer.webp'
+import Todo from '../../Assets/Projects/todo.webp'
+import ludosIcon from '../../Assets/Projects/LudosIcon.png'
+import ludosWallpaper from '../../Assets/Projects/LudosWallpaper.webp'
+import WeatherIcon from '../../Assets/Projects/WeatherIcon.svg'
+import WeatherWallpaper from '../../Assets/Projects/Weather.webp'
 import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
 
 const Projects = forwardRef( (props,ContainerRef) => {
     const ProjectsData =[
+        {
+            Wallpaper:WeatherWallpaper,
+            Icon:WeatherIcon,
+            link:"https://andrias-weather.vercel.app"
+        },
         {
             Wallpaper:Ecommerce,
             Icon:EcommerceIcon,

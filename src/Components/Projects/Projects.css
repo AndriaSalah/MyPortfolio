@@ -35,10 +35,9 @@
 
     }
     .Projects-container .ghost{
-
+        padding: 0 0.5rem;
     }
     .Projects-wrapper{
-
         width: 100%;
         height: 100%;
         gap: 1.5rem;
@@ -46,6 +45,15 @@
        padding: 0 1rem;
     }
     .Projects-wrapper::-webkit-scrollbar{
+        display: block;
+        height: 0.75rem;
+    }
+    .Projects-wrapper::-webkit-scrollbar-thumb{
+       width: 10rem;
+        background: black;
+        border: 1px solid rgba(140, 118, 231, 0.4);
+    }
+    .Projects-wrapper::-webkit-scrollbar-track{
         display: none;
     }
     .Projects-container .ghost{

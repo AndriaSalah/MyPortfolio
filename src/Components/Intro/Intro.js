@@ -41,7 +41,7 @@ const Intro = forwardRef ((props, MainContainerRef) => {
             {/*<button onClick={printscroll} style={{position:"sticky" , top:"50%"}}>print scroll pos</button>*/}
             <motion.div  className="Intro" initial="hidden" animate={InView ? "visible" : "hidden"}>
                 <motion.div style={{opacity:Intro_Text_animation}} className={"TextContainer"}>
-                    <AnimatedText Stagger={0.03}
+                    <AnimatedText Stagger={0.02}
                                   text={"I'm Andria, a Frontend Developer who's passionate about creating visually stunning and user-friendly websites. I use ReactJS and Framer Motion to deliver fast websites with captivating animations. I'm also eager to learn and dedicate a lot of time to exploring new libraries and technologies."}/>
                 </motion.div>
                 <motion.div

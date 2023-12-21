@@ -8,7 +8,7 @@ import Contact from "./Components/Contact/Contact";
 import Intro from "./Components/Intro/Intro";
 import {motion, useScroll, useTransform} from "framer-motion";
 import {IoIosArrowUp} from "react-icons/io";
-import cv from "./Assets/AndriaSalahRoushdy.pdf";
+import cv from "./Assets/Andria_salah_roushdy_frontend.pdf";
 import {PiFilePdfFill} from "react-icons/pi";
 export const IsMobileContext = createContext({})
 function App() {
@@ -49,7 +49,7 @@ function App() {
         <div ref={MainContainerRef} className="App">
             <IsMobileContext.Provider value={isMobile}>
             <Navbar skillsRef={SkillRef} aboutRef={aboutRef} projRef={ProjectsRef} contRef={ContactRef}/>
-            <a className={"cv"} download={"Andria_Salah_Roushdy.pdf"} href={cv} >CV <PiFilePdfFill/></a>
+            <a className={"cv"} download={"Andria_Salah_Roushdy_frontend.pdf"} href={cv} >CV <PiFilePdfFill/></a>
                 <Welcome ref={welcomeRef}/>
                 <Intro ref={aboutRef}/>
                 <Projects ref={ProjectsRef}/>

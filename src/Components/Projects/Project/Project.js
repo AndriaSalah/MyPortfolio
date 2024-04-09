@@ -4,7 +4,7 @@ import './Project.css'
 import {motion} from "framer-motion";
 import {IsMobileContext} from "../../../App";
 
-const Project = ({wallpaper,icon}) => {
+const Project = ({wallpaper,icon,full = false}) => {
     const isMobile= useContext(IsMobileContext)
     const wallpaperAnimation = {
         initial:{
@@ -23,7 +23,7 @@ const Project = ({wallpaper,icon}) => {
     return (
         <motion.div initial={!isMobile ? "initial":""} whileHover={!isMobile ? "hover":""} className={"Project"}>
             <motion.div className={"wallpaper"}><motion.img variants={wallpaperAnimation}  src={wallpaper} alt={"ecommerce"}/></motion.div>
-            <motion.div variants={iconAnimation} className={"icon"}><img src={icon} alt={"icon"}/></motion.div>
+            <motion.div variants={iconAnimation} className={"icon"}><img style={full?{width:"100%"}:{}} src={icon} alt={"icon"}/></motion.div>
         </motion.div>
 
     );

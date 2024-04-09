@@ -12,11 +12,21 @@ import ludosIcon from '../../Assets/Projects/Ludos.svg'
 import ludosWallpaper from '../../Assets/Projects/LudosWallpaper.webp'
 import WeatherIcon from '../../Assets/Projects/WeatherIcon.svg'
 import WeatherWallpaper from '../../Assets/Projects/Weather.webp'
+import fluentIcon from '../../Assets/Projects/Fluent-weather-icon.png'
+import fluentWall from '../../Assets/Projects/Fluent-weather-wall.webp'
+
+
 import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
 
 const Projects = forwardRef( (props,ContainerRef) => {
     const ProjectsData =[
+        {
+            Wallpaper:fluentWall,
+            Icon:fluentIcon,
+            link:"https://Fluent-weather.vercel.app",
+            full:true
+        },
         {
             Wallpaper:WeatherWallpaper,
             Icon:WeatherIcon,
@@ -56,7 +66,7 @@ const Projects = forwardRef( (props,ContainerRef) => {
                 <h1><AnimatedText text={"PROJECTS"} /></h1>
                 <motion.div className={"Projects-wrapper"} style={{x: isMobile? 0:ScrollX}}>
                     {ProjectsData.map((project,index)=>(
-                       [<a href={project.link} key={index} target="_blank" rel="noreferrer noopener"><Project wallpaper={project.Wallpaper} icon={project.Icon}/></a>]
+                       [<a href={project.link} key={index} target="_blank" rel="noreferrer noopener"><Project wallpaper={project.Wallpaper} icon={project.Icon} full={project.full}/></a>]
                     ))}
                 </motion.div>
             </div>

@@ -33,7 +33,7 @@
 }
 .Project .icon img{
     aspect-ratio: 1/1;
-    object-fit: fill;
+    object-fit: contain;
     border-radius: 10px;
     width: 70%;
 

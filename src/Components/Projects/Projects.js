@@ -14,13 +14,20 @@ import WeatherIcon from '../../Assets/Projects/WeatherIcon.svg'
 import WeatherWallpaper from '../../Assets/Projects/Weather.webp'
 import fluentIcon from '../../Assets/Projects/Fluent-weather-icon.png'
 import fluentWall from '../../Assets/Projects/Fluent-weather-wall.webp'
-
+import eventecIcon from '../../Assets/Projects/eventecIcon.png'
+import eventecWallpaper from '../../Assets/Projects/eventecWallpaper.webp'
 
 import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
 
 const Projects = forwardRef( (props,ContainerRef) => {
     const ProjectsData =[
+        {
+            Wallpaper:eventecWallpaper,
+            Icon:eventecIcon,
+            link:"https://eventeceg.com",
+            full: true
+        },
         {
             Wallpaper:fluentWall,
             Icon:fluentIcon,
@@ -53,13 +60,14 @@ const Projects = forwardRef( (props,ContainerRef) => {
             link:"https://andrias-expense-tracker.vercel.app"
         },
 
+
     ]
     const isMobile=useContext(IsMobileContext)
     const {scrollYProgress} = useScroll({
         target:ContainerRef,
         offset:["start start" ,"end"]
     })
-    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-55%"])
+    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-65%"])
     return (
         <div ref={ContainerRef} className={"Projects-container"}>
             <div className={"ghost"}>

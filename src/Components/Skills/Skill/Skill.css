@@ -33,7 +33,7 @@
 }
 
 .Skill p{
-    width: clamp(4rem,8vw,6rem);
+    width: clamp(4rem,8vw,8rem);
     font-weight: lighter;
 }
 .Skill img{

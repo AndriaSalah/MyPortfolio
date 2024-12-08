@@ -25,7 +25,7 @@ const Projects = forwardRef( (props,ContainerRef) => {
         {
             Wallpaper:eventecWallpaper,
             Icon:eventecIcon,
-            link:"https://eventeceg.com",
+            link:"https://andrias-eventec.vercel.app/",
             full: true
         },
         {

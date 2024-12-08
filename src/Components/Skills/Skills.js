@@ -7,9 +7,10 @@ import htmlIcon from "../../Assets/Skills/html.png"
 import cssIcon from "../../Assets/Skills/css-3.png"
 import jsIcon from "../../Assets/Skills/js.png"
 import javaIcon from "../../Assets/Skills/java.png"
-import unityIcon from "../../Assets/Skills/unity.png"
-import cshIcon from "../../Assets/Skills/c-sharp.png"
-import cppIcon from "../../Assets/Skills/c-.png"
+import tsIcon from "../../Assets/Skills/typescript.svg"
+import nextIcon from "../../Assets/Skills/next-js.svg"
+import tailwindIcon from "../../Assets/Skills/tailwindcss.svg"
+import reduxIcon from "../../Assets/Skills/redux.svg"
 import figmaIcon from "../../Assets/Skills/figma.png"
 import sqlIcon from "../../Assets/Skills/sql-server.png"
 import AnimatedText from "../AnimatedText";
@@ -20,6 +21,26 @@ const SkillsData=[
         icon: reactIcon
     },
     {
+        title: "Java Script",
+        icon: jsIcon
+    },
+    {
+        title: "Type Script",
+        icon: tsIcon
+    },
+    {
+        title: "Next.JS",
+        icon: nextIcon
+    },
+    {
+        title: "Tailwind",
+        icon: tailwindIcon
+    },
+    {
+        title: "Redux TK",
+        icon: reduxIcon
+    },
+    {
         title: "HTML5",
         icon: htmlIcon
     },
@@ -28,24 +49,8 @@ const SkillsData=[
         icon: cssIcon
     },
     {
-        title: "JS",
-        icon: jsIcon
-    },
-    {
         title: "Java",
         icon: javaIcon
-    },
-    {
-        title: "Unity",
-        icon: unityIcon
-    },
-    {
-        title: "C#",
-        icon: cshIcon
-    },
-    {
-        title: "C++",
-        icon: cppIcon
     },
     {
         title: "Figma",

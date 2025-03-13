@@ -16,12 +16,28 @@ import fluentIcon from '../../Assets/Projects/Fluent-weather-icon.png'
 import fluentWall from '../../Assets/Projects/Fluent-weather-wall.webp'
 import eventecIcon from '../../Assets/Projects/eventecIcon.png'
 import eventecWallpaper from '../../Assets/Projects/eventecWallpaper.webp'
+import finansakWallpaper from '../../Assets/Projects/finansakWallpaper.webp'
+import finansakIcon from '../../Assets/Projects/finansakIcon.svg'
+import thecoinsappWallpaper from '../../Assets/Projects/thecoinsappWallpaper.webp'
+import thecoinsappIcon from '../../Assets/Projects/thecoinsappIcon.png'
 
 import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
 
 const Projects = forwardRef( (props,ContainerRef) => {
     const ProjectsData =[
+        {
+            Wallpaper:thecoinsappWallpaper,
+            Icon:thecoinsappIcon,
+            link:"https://thecoins.app",
+            full: true
+        },
+        {
+            Wallpaper:finansakWallpaper,
+            Icon:finansakIcon,
+            link:"https://finansak.com",
+            full: true
+        },
         {
             Wallpaper:eventecWallpaper,
             Icon:eventecIcon,
@@ -67,7 +83,7 @@ const Projects = forwardRef( (props,ContainerRef) => {
         target:ContainerRef,
         offset:["start start" ,"end"]
     })
-    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-65%"])
+    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-75%"])
     return (
         <div ref={ContainerRef} className={"Projects-container"}>
             <div className={"ghost"}>

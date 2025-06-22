@@ -35,12 +35,12 @@
 
     }
     .Projects-container .ghost{
-        padding: 0 0.5rem;
+        padding: 0 ;
     }
     .Projects-wrapper{
         width: 100%;
         height: 100%;
-        gap: 1.5rem;
+        gap: 0.7rem;
         overflow-x: scroll ;
        padding: 0 1rem;
     }

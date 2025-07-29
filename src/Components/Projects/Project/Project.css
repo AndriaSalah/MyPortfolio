@@ -13,7 +13,7 @@
 }
 .Project .wallpaper img{
     width: 40vw;
-    height: 100%;
+    height: 20rem;
     /*height: 23rem;*/
     border-radius: 25px ;
     object-fit: cover;
@@ -47,7 +47,7 @@
     }
     .Project .wallpaper img{
         width: 82vw;
-        height: 50vw;
+        height: 52vw;
         border-radius: 5px ;
         filter: brightness(1);
     }

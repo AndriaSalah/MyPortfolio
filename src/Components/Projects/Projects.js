@@ -20,12 +20,51 @@ import finansakWallpaper from '../../Assets/Projects/finansakWallpaper.webp'
 import finansakIcon from '../../Assets/Projects/finansakIcon.svg'
 import thecoinsappWallpaper from '../../Assets/Projects/thecoinsappWallpaper.webp'
 import thecoinsappIcon from '../../Assets/Projects/thecoinsappIcon.png'
-
+import colabWallpaper from '../../Assets/Projects/colabBg.png'
+import colabIcon from '../../Assets/Projects/colabIcon.png'
+import zamzamWallpaper from '../../Assets/Projects/zamzamBg.png'
+import zamzamIcon from '../../Assets/Projects/zamzamIcon.png'
+import cornerstoneIcon from '../../Assets/Projects/cornerstoneIcon.svg'
+import cornerstoneWallpaper from '../../Assets/Projects/cornerstoneBg.png'
+import entertainmeWallpaper from '../../Assets/Projects/entertainmeWallpaper.png'
+import entertainmeIcon from '../../Assets/Projects/entertainmeIcon.png'
+import eventtecWallpaper from '../../Assets/Projects/eventtcBg.png'
+import eventtecIcon from '../../Assets/Projects/eventtecIcon.svg'
 import AnimatedText from "../AnimatedText";
 import {IsMobileContext} from "../../App";
 
 const Projects = forwardRef( (props,ContainerRef) => {
     const ProjectsData =[
+        {
+            Wallpaper:eventtecWallpaper,
+            Icon:eventtecIcon,
+            link:"https://entertain-web.o-projects.org/en/Home",
+
+        },
+        {
+            Wallpaper:entertainmeWallpaper,
+            Icon:entertainmeIcon,
+            link:"https://entertain-web.o-projects.org/en/Home",
+
+        },
+        {
+            Wallpaper:cornerstoneWallpaper,
+            Icon:cornerstoneIcon,
+            link:"https://cornerstone-new.o-projects.org/",
+
+        },
+        {
+            Wallpaper:zamzamWallpaper,
+            Icon:zamzamIcon,
+            link:"https://zamzam-website.o-projects.org/en",
+
+        },
+        {
+            Wallpaper:colabWallpaper,
+            Icon:colabIcon,
+            link:"https://colab.o-projects.org/",
+            full: true
+        },
         {
             Wallpaper:thecoinsappWallpaper,
             Icon:thecoinsappIcon,
@@ -83,7 +122,7 @@ const Projects = forwardRef( (props,ContainerRef) => {
         target:ContainerRef,
         offset:["start start" ,"end"]
     })
-    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-75%"])
+    const ScrollX = useTransform(scrollYProgress,[0,1],["5%","-85%"])
     return (
         <div ref={ContainerRef} className={"Projects-container"}>
             <div className={"ghost"}>

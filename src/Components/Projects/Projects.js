@@ -38,7 +38,7 @@ const Projects = forwardRef( (props,ContainerRef) => {
         {
             Wallpaper:eventtecWallpaper,
             Icon:eventtecIcon,
-            link:"https://entertain-web.o-projects.org/en/Home",
+            link:"https://eventtec.com/en",
 
         },
         {
